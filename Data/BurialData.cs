@@ -8,56 +8,36 @@ namespace Intex2API.Data
 {
     public class BurialData
     {
-        public float id { get; set; }
-        public float square_north_south { get; set; }
-        public float head_direction { get; set; }
-        public float sex { get; set; }
-        public float north_south { get; set; }
-        public float depth { get; set; }
-        public float east_west { get; set; }
-        public float adult_sub_adult { get; set; }
-        public float face_bundles { get; set; }
-        public float south_to_head { get; set; }
-        public float preservation { get; set; }
-        public float fieldbook_page { get; set; }
-        public float square_east_west { get; set; }
-        public float goods { get; set; }
-        public float text { get; set; }
-        public float wrapping { get; set; }
-        public float hair_color { get; set; }
-        public float west_to_head { get; set; }
-        public float samples_collected { get; set; }
-        public float area { get; set; }
-        public float burial_id { get; set; }
-        public float length { get; set; }
-        public float burial_number { get; set; }
-        public float data_expert_initals { get; set; }
-        public float west_to_feet { get; set; }
-        public float age_at_death { get; set; }
-        public float south_to_feet { get; set; }
-        public float excavation_recorder { get; set; }
-        public float photos { get; set; }
-        public float hair { get; set; }
-        public float burial_materials { get; set; }
-        public float date_of_excavation { get; set; }
-        public float fieldbook_excavation_year { get; set; }
-        public float cluster_number { get; set; }
-        public float shaft_number { get; set; }
+        public float headdirection_ { get; set; }
+        public float headdirection_E { get; set; }
+        public float headdirection_W { get; set; }
+        public float ageatdeath_ { get; set; }
+        public float ageatdeath_A { get; set; }
+        public float ageatdeath_C { get; set; }
+        public float ageatdeath_I { get; set; }
+        public float ageatdeath_N { get; set; }
+        public float material_Linen { get; set; }
+        public float material_Linen_background { get; set; }
+        public float material_Linen_red { get; set; }
+        public float material_Linen_VLS { get; set; }
+        public float material_Other { get; set; }
+        public float material_Other_burlap { get; set; }
+        public float material_Other_vegetable_fiber { get; set; }
+        public float material_Wool { get; set; }
+        public float material_Wool_tapestry { get; set; }
+        public float material_Wool_thread { get; set; }
+      
         public Tensor<float> AsTensor()
         {
             float[] data = new float[]
             {
-              id, square_north_south, head_direction, sex, north_south,
-              depth, east_west, adult_sub_adult, face_bundles,
-               south_to_head, preservation, fieldbook_page, square_east_west,
-               goods, text, wrapping, hair_color, west_to_head,
-               samples_collected, area, burial_id, length, burial_number,
-               data_expert_initals, west_to_feet, age_at_death, south_to_feet,
-               excavation_recorder, photos, hair, burial_materials,
-               date_of_excavation, fieldbook_excavation_year, cluster_number,
-               shaft_number
-                    };
-            int[] dimensions = new int[] { 1, 35 };
+              headdirection_, headdirection_E, headdirection_W, ageatdeath_,
+              ageatdeath_A, ageatdeath_C, ageatdeath_I, ageatdeath_N,
+               material_Linen, material_Linen_background, material_Linen_red, material_Linen_VLS,
+               material_Other, material_Other_burlap, material_Other_vegetable_fiber, material_Wool,
+               material_Wool_tapestry, material_Wool_thread
+            };
+            int[] dimensions = new int[] { 1, 18 };
             return new DenseTensor<float>(data, dimensions);
         }
     }
